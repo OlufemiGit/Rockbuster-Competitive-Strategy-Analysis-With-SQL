@@ -1,0 +1,35 @@
+# Query to fetch Descriptive (Summary Statistics) for numerical columns in film table  (length, rental_rate)
+
+SELECT
+  MIN(length) AS min_length,
+  MAX (length) AS max_length,
+  AVG (length) AS avg_length,
+  MIN (rental_rate) AS min_rental_rate,
+  MAX (rental_rate) AS max_rental_rate,
+  AVG (rental_rate) AS avg_rental_rate
+FROM film;
+
+# Query to fetch Descriptive (Summary Statistics) for numerical columns in customer table (counting total customers and average customer IDs):
+
+SELECT
+  MIN(customer_id) AS min_customer_id,
+  MAX(customer_id) AS max_customer_id,
+  COUNT (*) AS total_customers,
+  AVG(customer_id) AS avg_customer_id
+FROM customer;
+
+# Query to fetch Descriptive (Summary Statistics) for non-numerical columns, calculate the mode value for Film table (Most Common Film Rating):
+
+SELECT rating, COUNT(*) AS count
+FROM film
+GROUP BY rating
+ORDER BY count DESC
+LIMIT 1;
+
+# Query to fetch Descriptive (Summary Statistics) for non-numerical columns, calculate the mode value for Customer Table (Most Common First Name) :
+
+SELECT first_name, COUNT (*) AS count
+FROM customer
+GROUP BY first_name
+ORDER BY count DESC
+LIMIT 1;
