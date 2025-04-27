@@ -21,6 +21,7 @@ The project utilizes Rockbuster’s internal data, including:
 - **SQL:** Querying and data analysis
 - **PostgreSQL:** Relational database management system
 - **Excel:** Data visualization and reporting
+- **ChatGPT & Other LLMs:** Assisted with structuring project documentation, refining grammar, and enhancing clarity in written content.
 
 # **Process / Methodology**
 - **Data Loading:** Import Rockbuster’s dataset into PostgreSQL.
